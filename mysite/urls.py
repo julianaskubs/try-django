@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('blog.urls')),
+    url(r'', include('blog.urls')), # aqui definimos nossa pagina principal,
+                                    # que deve seguir orientacoes de blog/urls
 ]

@@ -16,3 +16,4 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+        # quando eu crio um post no shell do django, o retorno que eu tenho eh o titulo criado
