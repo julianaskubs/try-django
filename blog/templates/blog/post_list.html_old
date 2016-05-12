@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <title>Django girls blog</title>
+    </head>
+
+    <body>
+      <div class="page-header">
+        <!--<h1><a href="http://djangogirls.org">DjangoGirls</a></h1>-->
+            <h1><a href="/">Django Girls Blog</a></h1>
+      </div>
+
+      <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="date">
+                                {{ post.published_date }}
+                            </div>
+                            <h1><a href="">{{ post.title }}</a></h1>
+                            <p>{{ post.text|linebreaks }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+      <!--old 2-->
+      <!--{% for post in posts %}-->
+        <!--<div class="post">-->
+          <!--<p>published: {{ post.published_date}}</p>-->
+          <!--<h1><a href="">{{ post.title }}</a></h1>-->
+          <!--<p>{{ post.text|linebreaks }}</p>-->
+        <!--</div>-->
+      <!--{% endfor %}-->
+      <!--old 2-->
+
+
+      <!--old 1-->
+      <!-- <div>
+        <p>published: 14.06.2014, 12:14</p>
+        <h2><a href="">My first post</a></h2>
+        <p>Esse e um teste de post que mostra no template</p>
+      </div> -->
+      <!-- <div>
+        <p>published: 14.06.2014, 12:14</p>
+        <h2><a href="">My second post</a></h2>
+        <p>Esse e um teste de post que mostra no template</p>
+      </div> -->
+      <!--old 1-->
+
+      <!--<p>Hi there!</p>-->
+      <!--<p>It works!</p>-->
+    </body>
+</html>
